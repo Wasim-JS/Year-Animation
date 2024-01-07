@@ -39,13 +39,14 @@ span{
     font-size: 8rem;
     top: 0;
     left: 76%;
-    transition: 0.3s linear;
+    transition: 0.3s ease-in;
     pointer-events: none;
+
 }
 
 .date:hover .last{
     /* transform: translate(100px,-100px) rotate(45deg); */
-    transform: scale(2);
+    transform: scale(3);
     filter: blur(20px);
     opacity: 0;
     cursor: pointer;
@@ -55,4 +56,17 @@ span{
     transform: scale(1);
     opacity: 1;
     filter: blur(0px);
+    animation: year .5s ease  1  forwards;
+}
+
+@keyframes year {
+
+    from{
+         transform: scale(3);
+        }
+        to{
+            
+            transform: scale(1);
+    }
+    
 }
